@@ -1,0 +1,24 @@
+.po_r {
+  position: relative; }
+
+.sass_test {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: tranlate(-50%);
+  -ms-transform: tranlate(-50%);
+  transform: tranlate(-50%);
+  background-color: grey !important;
+  color: purple; }
+
+.mixin_test_1 {
+  background-color: black;
+  color: violet; }
+
+.mixin_test_2 {
+  border-radius: 50%;
+  color: green;
+  border: 5px solid green;
+  -webkit-text-decoration: green;
+  text-decoration: green;
+  font-size: 21px; }

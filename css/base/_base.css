@@ -1,0 +1,9 @@
+a {
+  color: violet !important;
+  text-decoration: none !important; }
+
+a:hover {
+  color: yellow !important; }
+
+body {
+  color: red; }

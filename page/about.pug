@@ -1,0 +1,273 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='description' content='Demo作品，非商業用途')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    meta(property='og:title' content='FB的標題')
+    meta(property='og:description' content='FB的描述')
+    meta(property='og:type' content='website')
+    meta(property='og:url' content='FB上的網址')
+    meta(property='og:image' content='FB的圖片')
+    title 奎米寵物生活館 - 關於我們
+    link(rel='stylesheet', href='stylesheets/all.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css')
+
+
+  body
+    //- 側邊選單
+    .aside.bg-second_light.pb-4
+      button.navbar-toggler.asideMenu__toggle.border-fifth.text-center(type='button' aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style='text-align: center')
+        span.navbar-toggler-icon.text-fifth.d-flex.justify-content-center.align-items-center
+          i.fas.fa-times
+      ul.navbar-nav.mt-3.aside__menu.pt-2
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle.px-3.py-1.aside__menu__dropdown.asideList__dropdown(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+            | 關於我們
+          ul.aside__menu__dropdown--open
+            li
+              a.dropdown-item.py-2.px-4(href='#') - 服務項目
+            li
+              a.dropdown-item.py-2.px-4(href='#') - 相關認證
+        li.nav-item.dropdown
+          .dropdown-divider
+          a.nav-link.dropdown-toggle.px-3.py-1.aside__menu__dropdown(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+            | 住宿環境
+          ul.aside__menu__dropdown--open
+            li
+              a.dropdown-item.py-2.px-4(href='#') - 汪星人住宿
+            li
+              a.dropdown-item.py-2.px-4(href='#') - 喵星人住宿
+        li.nav-item
+          .dropdown-divider
+          a.nav-link.px-3.py-1(href='#') 寵物美容
+        li.nav-item
+          .dropdown-divider
+          a.nav-link.px-3.py-1(href='#') 寵物視訊 
+        li.nav-item
+          .dropdown-divider
+          a.nav-link.px-3.py-1(href='#') 最新消息
+        li.nav-item
+          .dropdown-divider
+          a.nav-link.px-3.py-1(href='#') 聯絡我們
+
+    //- navbar top
+    nav.navbar.navbar-expand-lg.navbar-light.fixed-top.navbar_scroll.py-0.bg-bgTransparent.po_r
+      button.navbar-toggler.asideMenu__toggle.border-fifth(type='button' aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style='text-align: center')
+        span.navbar-toggler-icon
+        span.sr-only Toggle navigation
+      .mx-auto.ml-3
+        a.navbar-brand.ml-3.py-0(href='#')
+          img(src="images/logo_lg.png", alt="", height='55px')
+      #navbarNav.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+          li.nav-item.dropdown.navbar__list
+            a#navbarDropdownMenuLink.nav-link.dropdown-toggle.navbar__list__menu.px-3.py-3.py-3(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+              | 關於我們
+            .dropdown-menu.bg-bgTransparent.mt-0.py-0.navbar__list__menu--open(aria-labelledby='navbarDropdownMenuLink' style='min-width: 100%; border: none')
+              a.dropdown-item.text-center.py-2(href='#') 服務項目
+              a.dropdown-item.text-center.py-2(href='#') 相關認證
+          li.nav-item.dropdown.navbar__list
+            a#navbarDropdownMenuLink.nav-link.dropdown-toggle.navbar__list__menu.px-3.py-3(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+              | 住宿環境
+            .dropdown-menu.bg-bgTransparent.mt-0.py-0.navbar__list__menu--open(aria-labelledby='navbarDropdownMenuLink' style='min-width: 100%; border: none')
+              a.dropdown-item.text-center.py-2(href='#') 汪星人住宿
+              a.dropdown-item.text-center.py-2(href='#') 喵星人住宿
+          li.nav-item
+            a.nav-link.px-3.py-3(href='#') 寵物美容
+          li.nav-item
+            a.nav-link.px-3.py-3(href='#') 寵物視訊                         
+          li.nav-item
+            a.nav-link.px-3.py-3(href='#') 最新消息
+          li.nav-item
+            a.nav-link.px-3.py-3(href='#') 聯絡我們
+
+    //- banner
+    section.banner.mt-0
+      .diamond
+        div
+      .container
+        .bannerText.animated.pulse
+          h2.bannerText__title 關於我們
+          p.bannerText__content Creamy 寵物生活館 - 傳遞我們最專業、溫暖的寵物環境
+    
+    //- 當前頁面位置 breadcrumb
+    .container.my-3
+      nav(aria-label='breadcrumb')
+        ol.breadcrumb.px-0
+          li.breadcrumb-item
+            a(href='#')
+              i.fas.fa-paw.text-second_light.mr-2
+              | Home
+          li.breadcrumb-item.active.font-weight-bold(aria-current='關於我們') 關於我們
+          //- li.breadcrumb-item.active.font-weight-bold(aria-current='page') Data
+
+    //- 關於我們
+    section.about.pt-3.pb-md-5.pb-2
+      .container
+        .about__content
+          h3.mb-3 CREAMY 寵物生活館 
+            h3.mb-md-5.mb-4.ml-md-9.ml-4.animated.fadeInRight(style="animation-duration: 2s") - 給毛孩最溫暖的家 !
+        .row
+          .col-md-7.col.order-md-1.order-2
+            .about__content__group.d-flex.wow.fadeIn(data-wow-duration="1.5s" data-wow-offset='100')
+              .row
+                .col-1.mr-3
+                  .text-primary_light
+                    i.fas.fa-bone.fa-2x
+                .col
+                  h4 毛小孩專屬用品配給
+                  p 為完全消毒防止寵物細菌感染，使用過的器具、毛巾、房間將進行全面式的消毒洗滌，過程絕不馬虎。
+            .about__content__group.d-flex.wow.fadeIn(data-wow-duration="1.5s" data-wow-offset='100')
+              .row
+                .col-1.mr-3                
+                  .text-primary_light
+                    i.fas.fa-cut.fa-2x                  
+                .col
+                  h4 透明化寵物美容室
+                  p 寵物美容室採透明開放式空間， 讓爸爸媽媽們清楚毛小孩的動向及狀態，以及在美容時的每一個過程，讓您更能放心。
+            .about__content__group.d-flex.wow.fadeIn(data-wow-duration="1.5s" data-wow-offset='100')
+              .row
+                .col-1.mr-3
+                  .text-primary_light
+                    i.fas.fa-shower.fa-2x
+                .col
+                  h4 使用澳洲進口天然寵物洗劑
+                  p 為避免毛小孩皮層因化學成分而出狀況，堅持使用澳洲進口的天然洗劑-"Plush puppy"為貓貓狗狗洗澡，讓毛小孩們能在毛澤亮麗無負擔。
+            .about__content__group.d-flex.wow.fadeIn.mb-3(data-wow-duration="1.5s" data-wow-offset='100')
+              .row
+                .col-1.mr-3
+                  i.fas.fa-igloo.fa-2x
+                .col
+                  h4 乾淨舒適的寵物住宿環境及安親服務
+                  p 寵物住宿安親服務堅持「貓狗空間區隔」，每換一個毛房客就會做一次環境清潔；備有完善的安全設備及專屬的寵物褓姆，提供24小時監視器監控及寵物陪玩服務，讓您能放心將毛小孩交由我們照顧。
+          .col-md-5.col.order-md-2.order-1.mb-4.p-0
+            .about__album
+              .swiper-container.about__album__container.circle
+                .swiper-wrapper
+                  .swiper-slide(style='background-image:url(images/about_album_1.jpg)')
+                  .swiper-slide(style='background-image:url(images/about_album_2.jpg)')
+                  .swiper-slide(style='background-image:url(images/about_album_3.jpg)')
+                //- Add Pagination
+                .swiper-pagination.swiper-pagination-white
+                //- Add Arrows
+                .swiper-button-next.swiper-button-white
+                .swiper-button-prev.swiper-button-white
+
+
+    //- footer
+    section#footer
+      .container-fluid
+        .footer__bgPhoto.img-fluid
+          .footer__bgPhoto__mobileCover
+          .container.px-lg-4.ml-md-4.pl-3.pt-md-9.pt-5.pb-0
+            .row
+              //- footer 左欄 ( Logo )
+              .col-lg-8.col-md-7.co-12.order-md-1.order-2
+                div.w-100.w-lg-50.d-md-block.d-none
+                  a(href='#')
+                    img.footer__logo__img(src="images/logo_lg.png", alt="")
+                //- footer 左欄, 下 ( 副 title, FB link, address ...)
+                .row.mt-2
+                  //- footer 左欄, 下左 ( 副 title, FB link)
+                  .col-md.col-12
+                    p.d-md-block.d-none Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus!
+                    .footer__exlinkGroup
+                      a.btn.pl-0(href="")
+                        .circle.border.border-fifth.po_r(style='width: 40px; height: 40px')
+                          i.fab.fa-facebook-f.text-fifth.ab_center
+                      a.btn.pl-0(href="")
+                        .circle.border.border-fifth.po_r(style='width: 40px; height: 40px')                   
+                          i.fab.fa-instagram.text-fifth.ab_center
+                      a.btn.pl-0(href="")
+                        .circle.border.border-fifth.po_r(style='width: 40px; height: 40px')
+                          i.fab.fa-line.text-fifth.ab_center
+                      a.btn.pl-0(href="")
+                        .circle.border.border-fifth.po_r(style='width: 40px; height: 40px')                 
+                          i.far.fa-share-square.text-fifth.ab_center
+                  //- footer 左欄, 下右 ( address, email ...)
+                  .col-md.col-12.pr-0.pt-4
+                    ul.list__info.d-inline-block
+                      li
+                        i.fas.fa-phone-volume.mr-2.mb-2.text-center(style='width: 16px; height: 16px')       
+                        a(href="") 0911-222-333
+                      li
+                        i.fas.fa-envelope.mr-2.mb-2.text-center(style='width: 16px; height: 16px') 
+                        a(href="") xxcreamy@test.com
+                      li
+                        i.fas.fa-map-marker-alt.mr-2.mb-2.text-center(style='width: 16px; height: 16px') 
+                        a(href="") Hsin-Chu City, Taiwan
+                      li
+                        i.far.fa-clock.mr-2.mb-2.text-center(style='width: 16px; height: 16px') 
+                        span 9:00 to 21:00
+              
+              //- footer 右欄 ( 關於我們, 寵物美容.. )
+              .col-lg-4.col-md-5.col-12.order-md-1.order-1.pl-lg-5.align-self-lg-end.align-self-md-center
+                .row
+                  //- footer 右欄-左 ( 關於我們.. )
+                  .col.pr-0
+                    ul.list-unstyled
+                      li.mb-2
+                        a(href='#') 
+                          i.far.fa-arrow-alt-circle-right.mr-2
+                          | 關於我們
+                      li.mb-2.ml-3
+                        a(href='#') 
+                          .mr-2 - 服務項目
+                      li.mb-2.ml-3
+                        a(href='#') 
+                          .mr-2 - 認證
+                      li.mb-2.mt-2
+                        a(href='#') 
+                          i.far.fa-arrow-alt-circle-right.mr-2
+                          | 住宿環境
+                      li.mb-2.ml-3
+                        a(href='#') - 汪星人住宿
+                      li.mb-2.ml-3
+                        a(href='#') - 喵星人住宿 
+                  //- footer 右欄-左 ( 寵物美容.. )
+                  .col.pr-0
+                    ul.list-unstyled
+                      li.mb-2
+                        a(href='#') 
+                          i.far.fa-arrow-alt-circle-right.mr-2
+                          | 寵物美容 
+                      li.mb-2
+                        a(href='#') 
+                          i.far.fa-arrow-alt-circle-right.mr-2
+                          | 寵物視訊 
+                      li.mb-2
+                        a(href='#') 
+                          i.far.fa-arrow-alt-circle-right.mr-2
+                          | 最新消息 
+                      li.mb-2
+                        a(href='#') 
+                          i.far.fa-arrow-alt-circle-right.mr-2
+                          | 聯絡我們                                                                   
+
+            .copyright.w-100.text-center.text-copyright.m-auto.pt-2
+              hr.border-copyright
+              p.m-0.pb-1 &copy; Copyright Yu Chen. 此網站為個人作品展示用,非商業用途.
+    
+    //- 回到最頂端 back to top
+    #backtoTop(style='display:none')
+      a(href="#")
+        i.fas.fa-angle-double-up
+
+
+
+//- 放最前面
+script(src='js/jquery-3.4.1.min.js')
+//- 插件
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous')
+script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js')
+script(src='js/wow.min.js')
+//- script(src="/javascripts/vendor.js")
+//- 放最後面
+script(type='text/javascript', src='js/all.js')
+
+
