@@ -1,0 +1,54 @@
+// 背景圖加文字區塊 - hover 會顯示背景圖
+// 在 Creamy 寵物生活館 index.html 的 certificate and contact 兩欄式區塊
+  // .column2_Banner1.po_r
+  //   a(href="")
+  //     .content.ab_center.text-center.w-100
+  //       .content__textGroup
+  //         small Check our certificate
+  //         .h2 Certificate
+  //     .hoverShow
+  //       .hoverShow__img.img-fluid(style='background-image: url(../images/11index_contact.jpg)')
+  //       .hoverShow__coverBg
+.column2_Banner1
+  border: 1px solid rgba($second_light,0.5)
+  border-left: none
+  text-transform: uppercase
+  +phone
+    border-left: 1px solid rgba($second_light,0.5)
+  &:hover
+    .hoverShow
+      opacity: 1
+    .content
+      color: white
+      animation: colorChange1 1s cubic-bezier(.68,.08,.48,.64)
+    .hoverShow__img
+      transform: translateY(-20px)
+  .content
+    z-index: 100 !important
+  .hoverShow
+    opacity: 0
+    overflow: hidden
+    transition: 1s
+    width: 100% !important
+    height: 330px !important
+    +phone
+      height: 250px !important
+  .hoverShow__img
+    width: 100% !important
+    height: 120% !important
+    background-size: cover
+    background-position: center center
+    background-repeat: no-repeat
+    transition: 1.5s
+  .hoverShow__coverBg
+    background-color: rgba(black,0.4) !important
+    width: 100% !important
+    height: 100% !important
+    position: absolute
+    top: 0
+    left: 0
+@keyframes colorChange1
+  0%
+    color: $second_light
+  100%
+    color: white

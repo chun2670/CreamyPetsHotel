@@ -1,0 +1,343 @@
+#hero,.navbar
+  transition: 0.3s ease
+#hero
+  overflow-x: hidden
+  overflow-y: hidden
+.nav-item__text
+  width: 80px !important
+.navbar__list__menu
+  padding-top: 20px !important
+  padding-bottom: 20px !important
+  cursor: pointer !important
+.dropdown-menu
+  margin: 0 !important
+.hero__bgPhoto
+  height: 100vh
+  width: 100%
+  background-image: url(../images/hero_bgPhoto.jpg)
+  background-attachment: fixed
+  background-position: left center
+  background-size: contain
+  background-repeat: no-repeat
+  +pad_pro
+    height: 65vh
+    background-position: center top
+    background-size: cover
+  +phone
+    height: 330px
+    background-position: center top
+    background-size: cover
+    background-attachment: inherit
+.hero__phoneHead
+  .h2
+    font-weight: 300 !important
+    color: $second_light
+    margin: 20px 10px
+.hero__content
+  font-family: "oswald", "Monoton", "微軟正黑體" !important
+  .h6
+    letter-spacing: 0.1em
+    font-weight: 300 !important
+  .h1
+    letter-spacing: 0.1em
+    font-weight: 300 !important
+  .text_ease-in
+    +text_ease-in
+.hero__aside
+  background-color: rgba($primary_light,.9)
+  position: absolute
+  bottom: 45px
+  right: 100px
+  width: 400px
+  transition: .6s !important
+  +pad_pro
+    bottom: 140px
+  +pad
+    bottom: 100px
+    right: 50px
+    width: 40%
+    height: auto
+  +phone
+    position: relative
+    right: -50px
+    width: 70%
+  &:hover
+    transform: translateY(-8px)
+    transition-timing-function: ease-out
+    cursor: pointer
+.hero__asidePhoto
+  height: 250px
+  width: 100%
+  background-image: url(../images/11news_1.jpg)
+  background-position: center
+  background-size: cover
+  transition: 1s !important
+  +phone
+    height: 180px
+.rotatorText
+  position: absolute
+  top: 0
+  right: -120px
+  +phone
+    margin-right: 30px
+.rotatorText__svg
+  width: 130px
+  height: 130px
+  animation: rotator 3s infinite linear 1.4s
+  animation-delay: 3s
+
+@keyframes rotator 
+  0%
+    transform: translate3d(-50%, -50%, 0) rotate(0deg)
+  100%
+    transform: translate3d(-50%, -50%, 0) rotate(-360deg)
+
+.rotatorText__path
+  fill: none
+  stroke: pink !important
+  stroke-miterlimit: 10
+  stroke-width: 8px
+  stroke-dasharray: 276
+  stroke-dashoffset: 85
+  animation: dash 3s infinite linear 1.4s
+// @keyframes colors
+// 	0% 
+//     stroke: red
+// 	// 25% stroke: #DE3E35
+// 	50% 
+//     stroke: #F7C223
+// 	// 75% stroke: #1B9A59
+//   100% 
+//     stroke: blue
+@keyframes dash 
+  0% 
+    stroke-dashoffset: $offset
+  50%
+    stroke-dashoffset: $offset/4
+    transform: rotate(135deg)
+  100% 
+    stroke-dashoffset: $offset
+    transform: rotate(450deg)
+
+  
+.tx1
+  transform: translate(19.39px, 59.41px)
+  transform: rotate(-93.75)
+.tx2
+  transform: matrix(0.21, -0.98, 0.98, 0.21, 18.75, 49.36)
+.tx3
+  transform: matrix(0.47, -0.88, 0.88, 0.47, 21.38, 38.13)
+.tx4
+  transform: matrix(0.7, -0.72, 0.72, 0.7, 26.36, 29.04)
+.tx5
+  transform: matrix(0.87, -0.49, 0.49, 0.87, 34.07, 21.26)
+.tx6
+  transform: translate(43.91px, 15.88px) 
+  transform: rotate(-13.58)
+
+
+
+
+// section#about
+.roll_text
+  font-size: 56px
+  letter-spacing: 0.9em
+  // 消除 letter-spacing 最後一個字母多餘的空白
+  // margin-right: -0.9em
+  // transition: all .6s ease-out
+  +pad
+    font-size: 48px
+  +phone
+    font-size: 30px
+    letter-spacing: 0.5em
+.column__left
+  color: darken($fifth, 30%)
+.column__mid
+  height: 480px
+  width: 100%
+  +pad
+    height: 370px
+  +phone
+    height: 320px
+.column__mid__img
+  background-image: url(../images/about_photo.jpg)
+  height: 100%
+  width: 100%
+  background-size: cover
+  mix-blend-mode: lighten
+  background-position: center center
+
+
+.irgLayout__content
+  flex-wrap: wrap
+.irgLayout__header
+  position: relative
+  z-index: 1
+  height: 180px
+  +phone
+    height: 65px
+.subttl
+  font-size: 10px !important
+.irgLayout
+  padding: 0 5.5555555556vw 16vh
+.irgLayout__group
+  margin-bottom: 8.1111111111vw
+  &:hover
+    .irgLayout__thumb
+      transform: translateY(-20px)
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+    .irgLayout__ttl
+      transform: translateY(16px)
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+    +phone
+      .irgLayout__thumb,.irgLayout__ttl
+        transform: none
+        box-shadow: none
+.irgLayout__thumb
+  width: 33.3333333333vw
+  height: 33.3333333333vw
+  background-size: cover
+  background-position: center center
+  transition: .3s
+  +phone
+    width: 100%
+    height: 53.3333333333vw
+.irgLayout__thumb__img
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+.irgLayout__ttl
+  width: 22.2222222222vw
+  margin-top: -2.7777777778vw
+  background-color: lighten($fifth,4%) 
+  color: $primary
+  transition: 1.2s
+  +phone
+    width: 100%
+  .h5
+    font-weight: 400
+  p
+    font-weight: 300
+    font-size: 14px
+    margin-bottom: 0
+    line-height: 1.5em
+
+//  irglayout group 區塊
+#irgLayout
+  .sticky-top
+    top: 50% !important
+.irgLayout__group
+  &:nth-child(1) .subttl, &:nth-child(3) .subttl
+    color: rgba($primary, 0.5)
+    position: absolute
+    white-space: nowrap
+    top: 25%
+    left: 0
+    transform-origin: 0 0
+    transform: translate3d(-2em, -2.7777777778vw, 0) rotate(-90deg)
+  &:nth-child(2)
+    margin-top: 22.2222222222vw
+  &:nth-child(2) .subttl
+    color: rgba($primary, 0.5)
+    position: absolute
+    white-space: nowrap
+    top: 25%
+    left: 100%
+    transform-origin: 0 0
+    transform: translate3d(0.5em, -2.7777777778vw, 0) rotate(-90deg)
+  &:nth-child(2) .irgLayout__ttl
+    margin-left: auto !important
+  &:nth-child(3)
+    margin-top: -22.2222222222vw
+    margin-left: 11.1111111111vw
+
+// service 手機版
+.irgLayout__phone
+  padding: 0 !important
+  margin-bottom: 80px
+.irgLayout__phone-bottom
+  height: 46px
+  width: 140px
+  border-radius: 3px
+
+
+// index news
+#news
+  margin-top: -50px
+  .swiper__container
+    width: 100%
+    +phone
+      padding-left: 0 !important
+      padding-right: 0 !important
+  .swiper__wrapper
+    // max-height: 350px
+  .swiper__wrapper__slide
+    font-size: 18px
+    height: auto
+    width: 25%
+    margin-right: 60px
+    +phone
+      width: 70%
+      margin-right: 25px !important
+    // &:nth-child(2)
+    //   width: 10%
+    // &:nth-child(3)
+    //   width: 20%
+    &:hover
+      .card-img-top
+        transform: translateY(-15px)
+  .card-img-top
+    transition: .5s
+  .inews__card
+    background: transparent !important
+    border: none !important
+  .hr
+    width: 100%
+    height: 1px
+    background: lighten($primary_light, 20%)
+    font-size: 6vw
+  .card-text
+    color: rgba($second, 0.5)   
+    letter-spacing: .05em 
+  .card-title
+    font-weight: 400
+    color: darken($second, 10%)
+    letter-spacing: .1em
+.roll_text-group
+  width: 50%
+  +pad_pro
+    width: 65%
+  +pad
+    width: 85%
+  +phone
+    width: 100vw
+.roll_text-span
+  display: inline-block
+
+
+//- Certificate and Contact
+// 在 module/boxHover.sass
+
+//- Well-Received 顧客好評
+#wellReceived
+  height: auto
+  .wellReceived__title
+    font-size: 24px
+    font-weight: 300
+  .autoMessage
+    overflow: hidden
+    font-weight: 300
+    letter-spacing: 0.1em
+  .fa-thumbs-up
+    animation: opacity 1.5s infinite
+  @keyframes opacity
+    0%, 100%
+      opacity: 0
+    50%
+      opacity: 1
+

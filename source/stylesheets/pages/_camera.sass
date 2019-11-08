@@ -1,0 +1,44 @@
+.camera__download
+  font-size: 16px
+.camera__download-icon
+  width: 30px
+  font-size: 36px
+  vertical-align: middle
+.camera__download-iconApple
+  color: #999
+.camera__download-iconAndroid
+  color: #A2C745
+
+.timeline
+  width: 100%
+  margin: 30px auto
+  position: relative
+  padding: 0 10px
+  -webkit-transition: all 0.4s ease
+  -moz-transition: all 0.4s ease
+  -ms-transition: all 0.4s ease
+  transition: all 0.4s ease
+  &:before
+    content: ""
+    width: 3px
+    height: 100%
+    background: $primary_light
+    position: absolute
+    left: 42px
+    top: 0
+    +phone
+      display: none
+  .timeline-item
+    margin-bottom: 50px
+    position: relative
+    .timeline-icon
+      background: #ee4d4d
+      width: 70px
+      height: 70px
+      position: absolute
+      top: 0
+      left: 0 //50%
+      overflow: hidden
+      +phone
+        display: none
+

@@ -1,0 +1,44 @@
+// 左欄 - swiper 照片輪播
+.swiper-container
+  width: 100%
+  height: 100%
+.beauty
+  .beauty__album__container
+    position: relative !important
+  .swiper-slide
+    background-position: right
+    background-size: cover
+    width: 100%
+    height: 500px
+    +pad_pro
+      height: 380px
+    +pad
+      height: 300px
+  .beauty__album__btn
+    width: 120px
+    height: 50px
+    position: absolute
+    right: 0
+    bottom: 0
+    z-index: 100
+  .beauty__album__btn-prev,.beauty__album__btn-next
+    width: 100%
+    height: 100%
+    padding: 12px
+    background-color: lighten($primary_light, 20%)
+    border: none !important
+    &:hover
+      cursor: pointer
+  .beauty__album__btn-prev
+    border-right: 1px solid $primary_light !important
+
+
+// 右欄 - content
+// _iconUlList.sass 裡
+.beauty__table
+  th,td
+    padding: 10px 12px !important
+    +pad
+      padding: 6px !important
+
+

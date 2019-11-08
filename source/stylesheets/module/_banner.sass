@@ -1,0 +1,50 @@
+// banner
+.banner
+  background-attachment: fixed
+  position: relative
+  background-image: url(images/banner_bgPhoto.jpg)
+  width: 100%
+  height: 400px
+  margin-top: 10px
+  .bannerText
+    max-width: 360px
+    position: absolute
+    margin-top: 160px
+    color: darken($fifth,3%)
+    letter-spacing: 2px
+    .bannerText__title
+      font-weight: 300
+    .bannerText__content
+      line-height: 1.6
+      font-weight: 100
+      font-size: 18px
+.diamond
+  position: absolute
+  background-color: rgba(0, 0, 0, 0.1)
+  width: 60%
+  height: 100%
+  right: 0
+  -moz-transition: width 2s
+  -o-transition: width 2s
+  -webkit-transition: width 2s
+  transition: width 2s
+  &:before
+    content: ""
+    position: absolute
+    width: 0
+    height: 0
+    top: 0
+    left: -100px
+    border-right: 100px solid rgba(0, 0, 0, 0.1)
+    border-bottom: 100px solid rgba(0, 0, 0, 0)
+  div:before
+    content: ""
+    position: absolute
+    width: 0
+    height: 0
+    bottom: 0
+    left: -100px
+    border-right: 100px solid rgba(0, 0, 0, 0.1)
+    border-top: 100px solid rgba(0, 0, 0, 0)
+.banner:hover .diamond
+  width: 25%

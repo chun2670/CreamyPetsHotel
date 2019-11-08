@@ -1,0 +1,136 @@
+// 左側邊欄選單 aside Menu 
+// HTML
+  // .aside.bg-second_light.pb-4.fixed-top
+  //   button.navbar-toggler.asideMenu__toggle.border-fifth.text-center(type='button' aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style='text-align: center')
+  //     span.navbar-toggler-icon.text-fifth.d-flex.justify-content-center.align-items-center
+  //       i.fas.fa-times
+  //   ul.navbar-nav.mt-3.aside__menu.pt-2
+  //     li.nav-item.dropdown
+  //       a.nav-link.dropdown-toggle.px-3.py-1.aside__menu__dropdown.asideList__dropdown(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+  //         | 關於我們
+  //       ul.aside__menu__dropdown--open
+  //         li
+  //           a.dropdown-item.py-2.px-4(href='about.html') - 關於我們          
+  //         li
+  //           a.dropdown-item.py-2.px-4(href='service.html') - 服務項目
+  //         li
+  //           a.dropdown-item.py-2.px-4(href='certificate.html') - 相關認證
+  //     li.nav-item
+  //       .dropdown-divider
+  //       a.nav-link.px-3.py-1(href='facilities.html') 環境介紹             
+  //     li.nav-item
+  //       .dropdown-divider
+  //       a.nav-link.px-3.py-1(href='beauty.html') 寵物美容
+
+// CSS
+// 點 button show 側邊選單
+.open
+  #hero,.navbar
+    transform: translateX(270px)
+  .aside
+    transform: translateX(0px)
+// 選單格式設定
+.aside
+  position: absolute
+  // top: 0
+  // bottom: 0
+  width: 100% !important
+  padding: 10px 20px
+  overflow: hidden
+  transform: translateX(-270px)
+  // 選單打開的速度
+  transition: 0.3s ease
+  z-index: 100
+  a
+    color: $fifth
+    &:hover
+      color: $third
+.asideMenu__toggle
+  border-radius: 3px !important
+.aside__menu
+  width: 85%
+// 把 menu list 的 dropdown 選單預設為關閉狀態
+.aside__menu__dropdown--open
+  display: none
+
+// 側邊欄選單 list 漸淡入動畫
+@keyframes animation-li1
+  0%
+      opacity: 0
+      transform: translateX(30px)
+  100% 
+      opacity: 1
+      transform: translateX(0px)
+@keyframes animation-li2
+  0%
+    opacity: 0
+    transform: translateX(40px)
+  100%
+    opacity: 1
+    transform: translateX(0px)
+@keyframes animation-li3
+  0%
+    opacity: 0
+    transform: translateX(60px)
+  100%
+    opacity: 1
+    transform: translateX(0px)
+@keyframes animation-li4
+  0%
+    opacity: 0
+    transform: translateX(90px)
+  100%
+    opacity: 1
+    transform: translateX(0px)
+@keyframes animation-li5
+  0%
+    opacity: 0
+    transform: translateX(120px)
+  100%
+    opacity: 1
+    transform: translateX(0px)
+@keyframes animation-li6
+  0%
+    opacity: 0
+    transform: translateX(150px)
+  100%
+    opacity: 1
+    transform: translateX(0px)
+// 指定給 .aside 底下的 li
+.aside > .navbar-nav > li:nth-child(1)
+  animation-name: animation-li1
+.aside > .navbar-nav > li:nth-child(2)
+  animation-name: animation-li2
+.aside > .navbar-nav > li:nth-child(3)
+  animation-name: animation-li3
+.aside > .navbar-nav > li:nth-child(4)
+  animation-name: animation-li4
+.aside > .navbar-nav > li:nth-child(5)
+  animation-name: animation-li5
+.aside > .navbar-nav > li:nth-child(6)
+  animation-name: animation-li6
+
+.aside > .navbar-nav > li
+  animation-duration: 3s !important
+
+// JS
+  // // ready
+  // // 點擊漢堡按鈕，開始側邊選單 
+  // aside navbar - 點擊漢堡按鈕，開始側邊選單
+  // $('.asideMenu__toggle').click(function (event) {
+  //   $('body').toggleClass('open');
+  //   // 點選除了 class="aside"" 元素以外的所有 < div > 元素，把 asideMenu 關閉
+  //   $("div:not(.aside)").click(function () {
+  //     $('body').removeClass('open');
+  //     return false;
+  //   });
+  // });
+  // // aside 側邊選單裡的 List 下拉式選單設定 1. 針對 ul 本身底層的 li 做收合。 2. 針對其它的同層 li 關閉
+  // $('.aside__menu__dropdown').click(function (e) {
+  //   e.preventDefault();
+  //   $(this).parent().find('.aside__menu__dropdown--open').slideToggle();
+  //   $(this).parent().siblings().find('.aside__menu__dropdown--open').slideUp();
+  // });
+
+    // -------------------------------------------------
+
